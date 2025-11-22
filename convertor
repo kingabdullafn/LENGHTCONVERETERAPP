@@ -1,0 +1,28 @@
+from tkinter import*
+window =  Tk()
+
+window.title('Length Convertor')
+window.geometry('500x500')
+
+frame = Frame(master=window, height = 400, width=400, bg= "red")
+
+lbl1 = Label(frame, text ="Input a lenght", bg= "#3895D3", fg='white', width=12)
+
+length_entry = Entry(frame)
+
+def display():
+    length = float(length_entry.get())
+    output = 39.37 *  length
+    textbox.insert(END, output)
+
+textbox = Text(bg= "#BEBEBE", fg= "black")
+
+btn = Button(text="Convert from meter to inch", command=display, bg='white')
+
+frame.place(x=60, y=0)
+lbl1.place(x=20, y=20)
+length_entry.place(x=150, y=20)
+btn.place(x=130, y=80)
+textbox.place(y=250)
+
+window.mainloop()
